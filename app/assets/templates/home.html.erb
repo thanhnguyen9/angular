@@ -24,16 +24,22 @@
 <div class="wide">
 </div>
 
-<div class="container">
+<div class="container"  ng-controller="HomeController">
   <div class="meetup-location">
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <input type="text" id="searchTextField" class="form-control" placeholder="Search for...">
-      			<span class="input-group-btn">
-        			<button class="btn btn-danger" type="button">Search</button>
-      			</span>
+
+          <form class="form-inline" name="locationSearchForm">
+            <div class="form-group">
+              <input type="text" id="searchTextField" class="form-control" placeholder="Search for..." ng-model="searchInput" required >
+              <span ng-show="locationSearchForm.searchInput.$invalid">Please input location</span>
+            </div>
+        			<button class="btn btn-danger" type="button" ng-click=" locationSearchForm.$valid && locationSearch()">Search</button>
+          </form>
+
+
         </div>
       </div>
       <div class="col-md-4"></div>

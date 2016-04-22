@@ -3,6 +3,6 @@ angular.module('AngularRails', ['ngRoute', 'templates'])
         $routeProvider
             .when('/', {
                 templateUrl: 'home.html',
-                controller: 'HomeCtrl'
+                controller: 'HomeController'
             });
     });
