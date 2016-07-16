@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :customers
+  devise_for :stylists
   root 'application#index'
     get '*path' => 'application#index'
   # The priority is based upon order of creation: first created -> highest priority.

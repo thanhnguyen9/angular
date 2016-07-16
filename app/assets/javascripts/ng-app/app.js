@@ -4,5 +4,9 @@ angular.module('AngularRails', ['ngRoute', 'templates'])
             .when('/', {
                 templateUrl: 'home.html',
                 controller: 'HomeController'
-            });
+            })
+            .when('/become-stylist', {
+                templateUrl: 'becomeStylist.html',
+                controller: 'BecomeStylistController'
+            })
     });
